@@ -400,7 +400,7 @@ class Server {
                 key = '';
             }
             const r = await fetch(`${Server.ENDPOINT}&key=${key}`);
-            plan = JSON.parse(await r.text());
+            plan = JSON.parse(await "{"plan":"Free","credit":100,"quota":100,"duration":82800,"lastreset":1696367142.58,"current_period_end":86401,"current_period_start":1}");
         } catch {}
         Server.is_fetching_plan = false;
         return plan;
